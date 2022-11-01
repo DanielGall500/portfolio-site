@@ -1,0 +1,118 @@
+:root {
+    --primary-background-color: rgba(240, 240, 240, 0.692); 
+    --secondary-background-color: rgb(200, 211, 218);
+    --mouser-over-color: rgb(110, 110, 110);
+    --text-font: Helvetica;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--text-font);
+    background-color: var(--secondary-background-color);
+}
+
+h1, h2, h3, p {
+    font-family: var(--text-font);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 1000px;
+    background-color: var(--primary-background-color);
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.menu-btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px; 
+    padding: 13px 18px;
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}
+
+.information-container {
+    width: 1000px;
+    height: 800px;
+    height: inherit;
+    background-color: var(--primary-background-color);
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.info-item {
+    visibility: hidden;
+    width: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info-item p,h3,ul {
+    text-align: left;
+    padding: 2%;
+    padding-right: 10%;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.intro-text {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+}
+
+.logo {
+    height: 100px;
+    width: 120px;
+    border: thin solid black;
+    margin-left: 2%;
+}
+
+.profile-img {
+    height: 25.5%;
+    width: 65%;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+h1, p {
+    text-align: center;
+    font-family: var(--text-font);
+    top: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
