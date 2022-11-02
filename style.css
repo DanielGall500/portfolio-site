@@ -38,6 +38,7 @@ h1, h2, h3, p {
 }
 
 .menu-btn {
+    position: relative;
     margin-top: 20px;
     width: 100px;
     height: 100px; 
@@ -45,6 +46,34 @@ h1, h2, h3, p {
     border-radius: 50%;
     font-size: 15px;
     text-align: center;
+}
+
+.btn-activate {
+    animation: neuron-activate 1.5s;
+    left: 40%;
+}
+
+.btn-deactivate {
+    animation: neuron-deactivate 1.5s;
+    left: 0%;
+}
+
+@keyframes neuron-active {
+    from {
+        left: 40%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes neuron-deactivate {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 40%;
+    }
 }
 
 .menu-container {
