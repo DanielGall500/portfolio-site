@@ -1,7 +1,7 @@
 :root {
     --primary-background-color: rgba(240, 240, 240, 0.692); 
     --secondary-background-color: rgb(200, 211, 218);
-    --mouser-over-color: rgb(110, 110, 110);
+    --primary-foreground-color: rgb(165, 55, 255);
     --text-font: Helvetica;
 }
 
@@ -15,6 +15,10 @@ body {
 
 h1, h2, h3, p {
     font-family: var(--text-font);
+}
+
+a {
+    color: var(--primary-foreground-color)
 }
 
 .body-container {
@@ -49,30 +53,38 @@ h1, h2, h3, p {
 }
 
 .btn-activate {
-    animation: neuron-activate 1.5s;
-    left: 40%;
+    animation: neuron-activate 0.5s;
+    left: 20%;
+    background-color: var(--primary-foreground-color);
+    color: white;
 }
 
 .btn-deactivate {
-    animation: neuron-deactivate 1.5s;
+    animation: neuron-deactivate 0.5s;
     left: 0%;
+    background-color: None;
+    color: None;
 }
 
-@keyframes neuron-active {
+.menu-btn:hover {
+    background-color: var(--primary-foreground-color);
+}
+
+@keyframes neuron-activate {
     from {
-        left: 40%;
+        left: 0%;
     }
     to {
-        left: 0%;
+        left: 20%;
     }
 }
 
 @keyframes neuron-deactivate {
     from {
-        left: 0%;
+        left: 20%;
     }
     to {
-        left: 40%;
+        left: 0%;
     }
 }
 
