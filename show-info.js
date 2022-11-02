@@ -34,19 +34,32 @@ var switchInfoVisibility = function(infoId, visible=false) {
 
 var switchBtnAnimation = function(e) {
     let id = e.target.id;
-    let btn = document.getElementById(id);
-    let animationForward = "menu-btn-movement";
-    let animationBack = "menu-btn-move-back";
+    let animActivate = "btn-activate";
+    let animDeactivate = "btn-deactivate";
+    let animPushBack = "btn-push-back";
 
-    // As long as we've used this button before,
-    // we will toggle the two animations.
-    // On the first go, we just toggle one to on
-    if (btn.classList.contains(animationForward) ||
-        btn.classList.contains(animationBack)) {
-        document.getElementById(id).classList.toggle('menu-btn-move-back');
+    for (btn of allButtons) {
+        let is_pressed = (id == btn.id);
+
+        if (is_pressed) {
+            // As long as we've used this button before,
+            // we will toggle the two animations.
+            // On the first go, we just toggle one to on
+            if (btn.classList.contains(animActivate) ||
+                btn.classList.contains(animDeactivate)) {
+                btn.classList.toggle(animDeactivate);
+            }
+
+            btn.classList.toggle(animActivate);
+        }
+        else {
+            if (btn.classList.contains(animActivate)) {
+                btn.classList.toggle(animActivate)
+                btn.classList.toggle(animDeactivate)
+            }
+        }
+
     }
-
-    document.getElementById(id).classList.toggle('menu-btn-movement');
 }
 
 for (const btn of allButtons) {
