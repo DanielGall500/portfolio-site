@@ -3,7 +3,7 @@
     <head>
         <title>Daniel Gallagher Resume</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css" type="text/css"/>
@@ -11,79 +11,83 @@
 
     </head>
     <body>
-        <div class="body-container">
-            <div class="intro-container">
-                <img class="profile-img" src="res/portrait.jpg" alt="professional-photo">
-                <div class="intro-text">
-                    <h1>Daniel Gallagher</h1>
-                    <h4>Data Cleaning, Visualisation & Analysis Services</h4>
+        <div class="body-container container">
+            <div class="home-navbar container">
+                <div class="col">
+                    <img class="row profile-img img-fluid" src="res/portrait.jpg" alt="professional-photo">
+                    <div class="row intro-text">
+                        <h1>Daniel Gallagher</h1>
+                        <h4 class="subtitle">Data Cleaning, Visualisation & Analysis Services</h4>
+                    </div>
                 </div>
-                <div class="menu-container">
-                    <button id="projectsBtn" type="button" class="btn btn-outline-secondary btn-lg menu-btn">Projects</button>
-                    <button id="experienceBtn" class="btn btn-outline-secondary btn-lg menu-btn">Experience</button>
-                    <button id="servicesBtn" class="btn btn-outline-secondary btn-lg menu-btn">Services</button>
+                <div class="col menu-container container">
+                    <button id="projectsBtn" type="button" class="row btn btn-outline-secondary btn-lg menu-btn">Projects</button>
+                    <button id="experienceBtn" class="row btn btn-outline-secondary btn-lg menu-btn">Experience</button>
+                    <button id="servicesBtn" class="row btn btn-outline-secondary btn-lg menu-btn">Services</button>
                 </div>
             </div>
-            <div class="information-container" id="information-container">
-                <div id="projectsInfo" class="info-item">
-                    <h3>Who am I?</h3>
-                    <p>I offer a range of services to ensure that we can get your data where you want it to be. This will typically involve working to understand and prepare your data for the future task of garnering insights. Once your data is ready, we can apply statistical analyses, create visualisations, and even work to create machine learning models. I have a specialisation in working with language data, however for many tasks have experience with all forms.</p>
-                    <h3>What do I do?</h3>
-                    <p>
-                        I am a Research Assistant at the ADAPT Centre, the world-leading SFI Research Centre for AI-Driven Digital Content Technology. I work on building speech-to-text and translation models at the ADAPT Centre in Dublin. Ireland. This involves working with a lot of (often messy) text data and language models.
-                    <br><br>
-                        I spend my day-to-day working in Python and its flourishing ecosystem of packages. However, I have experience in a wide variety of programming languages from my BSc Computer Science with Data Science completed this year at University College Dublin. This means I can adapt to your specific needs and we can work together to ensure that your project is successfully completed.
-                    </p>
-                    <img class="logo" src="res/adapt-centre-ireland-logo.jpg" alt="Adapt logo">
-                    <img class="logo" src="res/dcu-logo.jpg" alt="DCU logo">
-                </div>
-                <div id="experienceInfo" class="info-item">
-                    <h3>Experience</h3>
-                    <p>
-                        <a href="https://www.adaptcentre.ie/"><b>ADAPT, Dublin City University— Research Assistant</b></a><br>
-                        June 2022 - PRESENT<br>
-                        Building and testing automated speech-to-text translation models for German, French, Italian, Polish, Irish, and English.
-                    </p>
-
-                    <p>
-                        <a href="https://cerg.ucd.ie/"><b>CERG, University College Dublin — Research Assistant</b><br></a>
-                        September 2020 - May 2022<br>
-                        Oversaw the Computing Crossroads research initiative under the supervision of Assistant Professor of Computer Science Dr. Brett Becker.
-                    </p>
-                    <h3>Publications</h3>
-                    <p>
-                        <a href="https://aclanthology.org/2022.coling-1.406/"><b>SHAP-Based Explanation Methods: A Review for NLP Interpretability</b></a><br>
-                        Edoardo Mosca, Ferenc Szigeti, Stella Tragianni, Daniel Gallagher, Georg Groh<br>
-                        Proceedings of the 29th International Conference on Computational Linguistics
+            <div class="information-container container" id="information-container">
+                <div class="col">
+                    <div id="projectsInfo" class="info-item">
+                        <h3>Who am I?</h3>
+                        <p>I offer a range of services to ensure that we can get your data where you want it to be. This will typically involve working to understand and prepare your data for the future task of garnering insights. Once your data is ready, we can apply statistical analyses, create visualisations, and even work to create machine learning models. I have a specialisation in working with language data, however for many tasks have experience with all forms.</p>
+                        <h3>What do I do?</h3>
+                        <p>
+                            I am a Research Assistant at the ADAPT Centre, the world-leading SFI Research Centre for AI-Driven Digital Content Technology. I work on building speech-to-text and translation models at the ADAPT Centre in Dublin. Ireland. This involves working with a lot of (often messy) text data and language models.
                         <br><br>
-                        <a href="https://dl.acm.org/doi/10.1145/3478431.3499392"><b>From the Horse’s Mouth: The Words We Use to Teach Diverse Student Groups Across Three Continents</b></a><br>
-                        Brett A. Becker, Daniel Gallagher, Paul Denny, James Prather, Colleen Gostomski, Kelli Norris, Garrett Powell.<br>
-                        SIGCSE 2022: 53rd ACM Technical Symposium on Computer Science Education
-                        <br><br>
-                        <a href="https://dl.acm.org/doi/10.1145/3456565.3460057?cid=81332489693"><b>Computing Crossroads: Career Diversity Highlighting Computing’s Natural Diversity</b></a><br>
-                        Brett A. Becker, Daniel Gallagher.<br>
-                        ITiCSE ’21 Proceedings of the 2021 ACM Conference on Innovation and Technology in Computer Science Education, 2021
-                    </p>
-                    <h3>Education</h3>
-                    <p>
-                        <b>University College Dublin — BSc Computer Science with Data Science</b><br>
-                        September 2018 - September 2022<br>
-                        Graduated with a first-class honours degree and recognised Structured Elective in Applied German.
-                    </p>
+                            I spend my day-to-day working in Python and its flourishing ecosystem of packages. However, I have experience in a wide variety of programming languages from my BSc Computer Science with Data Science completed this year at University College Dublin. This means I can adapt to your specific needs and we can work together to ensure that your project is successfully completed.
+                        </p>
+                        <img class="logo" src="res/adapt-centre-ireland-logo.jpg" alt="Adapt logo">
+                        <img class="logo" src="res/dcu-logo.jpg" alt="DCU logo">
+                    </div>
+                    <div id="experienceInfo" class="info-item">
+                        <h3>Experience</h3>
+                        <p>
+                            <a href="https://www.adaptcentre.ie/"><b>ADAPT, Dublin City University— Research Assistant</b></a><br>
+                            June 2022 - PRESENT<br>
+                            Building and testing automated speech-to-text translation models for German, French, Italian, Polish, Irish, and English.
+                        </p>
 
+                        <p>
+                            <a href="https://cerg.ucd.ie/"><b>CERG, University College Dublin — Research Assistant</b><br></a>
+                            September 2020 - May 2022<br>
+                            Oversaw the Computing Crossroads research initiative under the supervision of Assistant Professor of Computer Science Dr. Brett Becker.
+                        </p>
+                        <h3>Publications</h3>
+                        <p>
+                            <a href="https://aclanthology.org/2022.coling-1.406/"><b>SHAP-Based Explanation Methods: A Review for NLP Interpretability</b></a><br>
+                            Edoardo Mosca, Ferenc Szigeti, Stella Tragianni, Daniel Gallagher, Georg Groh<br>
+                            Proceedings of the 29th International Conference on Computational Linguistics
+                            <br><br>
+                            <a href="https://dl.acm.org/doi/10.1145/3478431.3499392"><b>From the Horse’s Mouth: The Words We Use to Teach Diverse Student Groups Across Three Continents</b></a><br>
+                            Brett A. Becker, Daniel Gallagher, Paul Denny, James Prather, Colleen Gostomski, Kelli Norris, Garrett Powell.<br>
+                            SIGCSE 2022: 53rd ACM Technical Symposium on Computer Science Education
+                            <br><br>
+                            <a href="https://dl.acm.org/doi/10.1145/3456565.3460057?cid=81332489693"><b>Computing Crossroads: Career Diversity Highlighting Computing’s Natural Diversity</b></a><br>
+                            Brett A. Becker, Daniel Gallagher.<br>
+                            ITiCSE ’21 Proceedings of the 2021 ACM Conference on Innovation and Technology in Computer Science Education, 2021
+                        </p>
+                        <h3>Education</h3>
+                        <p>
+                            <b>University College Dublin — BSc Computer Science with Data Science</b><br>
+                            September 2018 - September 2022<br>
+                            Graduated with a first-class honours degree and recognised Structured Elective in Applied German.
+                        </p>
+
+                    </div>
+                    <div id="servicesInfo" class="info-item">
+                        <h3>Data Cleaning</h3>
+                        <p>In the real world, datasets are very often filled with missing values, inconsistent labeling, and in need of further preprocessing such as the creation of new columns. Only then should they be used for harvesting insights and the training of statistical models. I will work with you in a professional and efficient manor throughout this cleaning process to create a working dataset that you directly use for analysis.</p>
+                        <br>
+                        <h3>Data Visualisation</h3>
+                        <p>Through a combination of tools we can work to visualise your data in the ways that you would like. Both static and interactive forms of visualisations can be carried out, with the potential for web integration if so desired. I primarily work with Python data visualisation packages, however the tools used for this can be adapted to the needs of the client.</p>
+                        <br>
+                        <h3>Data Analysis / Mining</h3>
+                        <p>Finding insights - the common end goal of creating datasets in the first place. Often you would like to gather insights from your data that will determine important decisions, but it’s often difficult to know where to begin. For this, we can work together to examine your data and objectives, and determine what type of analysis would be suitable, typically through a combination of statistical tests and data visualisation.</p>
+                        <br>
+                        <h3>Natural Language Processing</h3>
+                        <p>If you have a task to be performed with language / text data, I can provide you with the services you require. I currently work on research at Ireland’s largest NLP research centre and work every day with speech and text data. This can range from the application of simple linguistic analyses such as tokenisation, POS tagging and dependency parsing, to the creation of language models as for the classification of a given tweet’s mood given the content or translation from one language to another.</p>
                 </div>
-                <div id="servicesInfo" class="info-item">
-                    <h3>Data Cleaning</h3>
-                    <p>In the real world, datasets are very often filled with missing values, inconsistent labeling, and in need of further preprocessing such as the creation of new columns. Only then should they be used for harvesting insights and the training of statistical models. I will work with you in a professional and efficient manor throughout this cleaning process to create a working dataset that you directly use for analysis.</p>
-                    <br>
-                    <h3>Data Visualisation</h3>
-                    <p>Through a combination of tools we can work to visualise your data in the ways that you would like. Both static and interactive forms of visualisations can be carried out, with the potential for web integration if so desired. I primarily work with Python data visualisation packages, however the tools used for this can be adapted to the needs of the client.</p>
-                    <br>
-                    <h3>Data Analysis / Mining</h3>
-                    <p>Finding insights - the common end goal of creating datasets in the first place. Often you would like to gather insights from your data that will determine important decisions, but it’s often difficult to know where to begin. For this, we can work together to examine your data and objectives, and determine what type of analysis would be suitable, typically through a combination of statistical tests and data visualisation.</p>
-                    <br>
-                    <h3>Natural Language Processing</h3>
-                    <p>If you have a task to be performed with language / text data, I can provide you with the services you require. I currently work on research at Ireland’s largest NLP research centre and work every day with speech and text data. This can range from the application of simple linguistic analyses such as tokenisation, POS tagging and dependency parsing, to the creation of language models as for the classification of a given tweet’s mood given the content or translation from one language to another.</p>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
