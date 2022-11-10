@@ -2,19 +2,105 @@
     --primary-background-color: rgba(240, 240, 240, 0.692); 
     --secondary-background-color: rgb(200, 211, 218);
     --primary-foreground-color: rgb(165, 55, 255);
+    --primary-text-colour: rgb(110, 110, 110);
+    --highlighted-text-colour: rgb(235, 235, 235);
     --text-font: Helvetica;
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--text-font);
-    background-color: var(--secondary-background-color);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--text-font);
+  background-color: var(--secondary-background-color);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 h1, h2, h3, p {
     font-family: var(--text-font);
+    color: var(--primary-text-colour);
+}
+
+h1, p {
+    text-align: center;
+    font-family: var(--text-font);
+    top: 50px;
+}
+
+h1,h2,h3,h4 {
+    font-size: 1.5rem;;
+}
+
+p {
+    font-size: 1rem;
 }
 
 a {
@@ -32,10 +118,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /*width: 400px;
-    height: 1000px; */
-    width: 20%;
-    height: 100%;
+    width: 25vw;
+    height: 30vh;
     background-color: var(--primary-background-color);
     text-align: center;
     position: relative;
@@ -46,11 +130,10 @@ a {
 .menu-btn {
     position: relative;
     margin-top: 10%;
-    width: 50%;
-    height: 100%; 
-    padding: 13px 18px;
     border-radius: 50%;
-    font-size: 15px;
+    padding: 13px 18px;
+    margin: 50%;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -99,23 +182,15 @@ a {
     padding: 10%;
 }
 
-.information-container {
-    width: 80%;
-    height: 100%;
-    height: inherit;
-    background-color: var(--primary-background-color);
-    position: relative;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin-left: 2%;
-}
-
 .info-item {
     visibility: hidden;
     width: inherit;
     position: absolute;
     top: 0;
     left: 0;
+    background-color: var(--primary-background-color);
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .info-item p,h3,ul {
@@ -142,22 +217,11 @@ a {
 }
 
 .profile-img {
-    height: 25.5%;
+    height: 45%;
     width: 65%;
     border: 2px solid black;
     border-radius: 50%;
     margin: 10px;
-}
-
-h1, p {
-    text-align: center;
-    font-family: var(--text-font);
-    top: 50px;
-}
-
-img {
-    height: 100%;
-    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -183,23 +247,49 @@ img {
         padding: 10px;
     }
 
-    h1, h2, h3, p {
+    .information-container {
+        background-color: var(--primary-background-color);
+        margin-left: 0%;
+        margin-top: 2%;
+        border: none;
+    }
+
+    h1 {
         font-family: var(--text-font);
-        font-size: medium;
+        font-size: 2rem;
+    }
+
+    p { 
+        font-family: var(--text-font);
+        font-size: 1rem;
     }
 
     a {
-        color: var(--primary-foreground-color)
+        color: var(--primary-foreground-color);
+        font-size: 1rem;
     }
 
     .menu-btn {
         position: relative;
         margin-top: 10%;
-        width: 50%;
+        width: 100%;
         height: 100%; 
         font-size: 15px;
         text-align: center;
         border-radius: 0%;
+    }
+
+    .btn-activate {
+        animation: none;
+        left: 0%;
+        color: var(--highlighted-text-colour);
+        background-color: var(--primary-foreground-color);
+    }
+
+    .btn-deactivate {
+        animation: none;
+        background-color: None;
+        color: var(--primary-text-colour);
     }
 
     .subtitle {
