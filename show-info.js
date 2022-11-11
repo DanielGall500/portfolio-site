@@ -36,7 +36,6 @@ var switchBtnAnimation = function(e) {
     let id = e.target.id;
     let animActivate = "btn-activate";
     let animDeactivate = "btn-deactivate";
-    let animPushBack = "btn-push-back";
 
     for (btn of allButtons) {
         let is_pressed = (id == btn.id);
