@@ -225,6 +225,10 @@ a {
     align-items: center;
 }
 
+#profile-img-wrapper {
+    justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
     .home-navbar {
         display: flex;
